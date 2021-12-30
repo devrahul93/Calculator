@@ -29,6 +29,13 @@ function handleSymbol(symbol) {
       break
   }
 }
+
+function handleMath() {
+  if (buffer === '0') {
+    return
+  }
+}
+
 function handleNumber(numberString) {
   if (buffer === '0') {
     buffer = numberString
