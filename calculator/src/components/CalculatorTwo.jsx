@@ -25,6 +25,15 @@ const CalculatorTwo = () => {
     setDigit(eval(digit))
   }
 
+  //backSpace or DEL
+  const backSpace = () => {
+    if (digit == '') {
+      return
+    }
+    const Value = digit.slice(0, -1)
+    setDigit(Value)
+  }
+
   return (
     <>
       <div className="container">
@@ -61,7 +70,9 @@ const CalculatorTwo = () => {
           >
             9
           </button>
-          <button className="but">DEL</button>
+          <button className="but" onClick={backSpace}>
+            DEL
+          </button>
           <button
             className="but"
             onClick={() => {
