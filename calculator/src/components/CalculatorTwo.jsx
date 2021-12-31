@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import '../index.css'
+import Toggler from './Toggler'
 
 const CalculatorTwo = () => {
   let initialstate = ''
   const [digit, setDigit] = useState(initialstate)
+  const [result, setResult] = useState(initialstate)
 
   const ops = ['+', '-', '/', '*', '.']
 
@@ -18,6 +20,9 @@ const CalculatorTwo = () => {
       return
     }
     setDigit(digit + value)
+    if (!ops.includes(value)) {
+      setResult(eval(digit + value))
+    }
   }
 
   //claulate or equal to
@@ -39,10 +44,9 @@ const CalculatorTwo = () => {
       <div className="container">
         <div className="header">
           <div>Calculator</div>
-          <div>Theme</div>
+          <div>{/* <Toggler /> */}</div>
         </div>
         <div className="screen">
-          <div className="operator-screen"></div>
           <div className="Resultscreen">{digit || '0'}</div>
         </div>
         <div className="buttons">
