@@ -44,7 +44,9 @@ const CalculatorTwo = () => {
       <div className="container">
         <div className="header">
           <div>Calculator</div>
-          <div>{/* <Toggler /> */}</div>
+          <div>
+            <Toggler />
+          </div>
         </div>
         <div className="screen">
           <div className="Resultscreen">{digit || '0'}</div>
