@@ -2,15 +2,15 @@ import '../index.css'
 const Toggler = () => {
   return (
     <>
-      <div className="input">
-        <input id="theme1" type="radio" name="theme" value="0" defaultChecked />
-        <label htmlFor="theme1">1</label>
+      <div className="switch-toggle switch-3 switch-candy">
+        <input id="on" name="state-d" type="radio" defaultChecked="" />
+        <label htmlFor="on" className="one"></label>
 
-        <input id="theme2" type="radio" value="1" name="theme" />
-        <label htmlFor="theme2">2</label>
+        <input id="na" name="state-d" type="radio" defaultChecked="checked" />
+        <label htmlFor="na" className="two"></label>
 
-        <input id="theme3" type="radio" value="2" name="theme" />
-        <label htmlFor="theme3">3</label>
+        <input id="off" name="state-d" type="radio" />
+        <label htmlFor="off" className="three"></label>
       </div>
     </>
   )

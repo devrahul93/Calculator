@@ -5,7 +5,6 @@ import Toggler from './Toggler'
 const CalculatorTwo = () => {
   let initialstate = ''
   const [digit, setDigit] = useState(initialstate)
-  const [result, setResult] = useState(initialstate)
 
   const ops = ['+', '-', '/', '*', '.']
 
@@ -20,14 +19,11 @@ const CalculatorTwo = () => {
       return
     }
     setDigit(digit + value)
-    if (!ops.includes(value)) {
-      setResult(eval(digit + value))
-    }
   }
 
   //claulate or equal to
   const calculate = () => {
-    setDigit(eval(digit))
+    setDigit(eval(digit).toString())
   }
 
   //backSpace or DEL
@@ -45,6 +41,7 @@ const CalculatorTwo = () => {
         <div className="header">
           <div>Calculator</div>
           <div>
+            <span>Theme</span>
             <Toggler />
           </div>
         </div>

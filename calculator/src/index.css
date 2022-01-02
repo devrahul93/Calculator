@@ -50,3 +50,38 @@
   grid-column-start: 3;
   grid-column-end: 5;
 }
+
+/* toggler button */
+.switch-toggle {
+  float: left;
+  background: #242729;
+}
+
+.switch-toggle input {
+  position: absolute;
+  opacity: 0;
+}
+.switch-toggle input + label {
+  padding: 7px;
+  float: left;
+  color: #fff;
+  cursor: pointer;
+}
+/* .switch-toggle input:checked + label {
+  background: green;
+} */
+
+input:checked + .one {
+  background-color: tomato;
+  border-radius: 50%;
+}
+
+input:checked + .two {
+  background-color: gold;
+  border-radius: 50%;
+}
+
+input:checked + .three {
+  background-color: violet;
+  border-radius: 50%;
+}
