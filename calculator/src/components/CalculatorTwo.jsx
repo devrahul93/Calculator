@@ -73,7 +73,7 @@ const CalculatorTwo = () => {
           >
             9
           </button>
-          <button className="but" onClick={backSpace}>
+          <button className="but delete" onClick={backSpace}>
             DEL
           </button>
           <button
@@ -172,7 +172,10 @@ const CalculatorTwo = () => {
           >
             &times;
           </button>
-          <button className="but but-1" onClick={() => setDigit(initialstate)}>
+          <button
+            className="but but-1 delete"
+            onClick={() => setDigit(initialstate)}
+          >
             RESET
           </button>
           <button className="but but-2" onClick={calculate}>
