@@ -37,6 +37,7 @@ const CalculatorTwo = () => {
 
   const themeToggle = () => {
     const btn = document.querySelector('[data-wrapper]')
+    const topText = document.querySelector('[data-top]')
     if (btn.classList.contains(`wrapper`)) {
       btn.classList.remove(`wrapper`)
       btn.classList.add('wrapper1')
@@ -44,6 +45,15 @@ const CalculatorTwo = () => {
     if (btn.classList.contains(`wrapper2`)) {
       btn.classList.remove(`wrapper2`)
       btn.classList.add('wrapper1')
+    }
+    /////////
+    if (topText.classList.contains(`header`)) {
+      topText.classList.remove(`header`)
+      topText.classList.add('header1')
+    }
+    if (topText.classList.contains(`header2`)) {
+      topText.classList.remove(`header2`)
+      topText.classList.add('header1')
     } else {
       return
     }
@@ -51,6 +61,8 @@ const CalculatorTwo = () => {
 
   const lastTheme = () => {
     const btn = document.querySelector('[data-wrapper]')
+    const topText = document.querySelector('[data-top]')
+
     if (btn.classList.contains(`wrapper`)) {
       btn.classList.remove(`wrapper`)
       btn.classList.add('wrapper2')
@@ -58,6 +70,15 @@ const CalculatorTwo = () => {
     if (btn.classList.contains(`wrapper1`)) {
       btn.classList.remove(`wrapper1`)
       btn.classList.add('wrapper2')
+    }
+
+    if (topText.classList.contains(`header`)) {
+      topText.classList.remove(`header`)
+      topText.classList.add('header2')
+    }
+    if (topText.classList.contains(`header1`)) {
+      topText.classList.remove(`header1`)
+      topText.classList.add('header2')
     } else {
       return
     }
@@ -65,6 +86,8 @@ const CalculatorTwo = () => {
 
   const defaultTheme = () => {
     const btn = document.querySelector('[data-wrapper]')
+    const topText = document.querySelector('[data-top]')
+
     if (btn.classList.contains(`wrapper1`)) {
       btn.classList.remove(`wrapper1`)
       btn.classList.add('wrapper')
@@ -72,6 +95,15 @@ const CalculatorTwo = () => {
     if (btn.classList.contains(`wrapper2`)) {
       btn.classList.remove(`wrapper2`)
       btn.classList.add('wrapper')
+    }
+    ////////////
+    if (topText.classList.contains(`header1`)) {
+      topText.classList.remove(`header1`)
+      topText.classList.add('header')
+    }
+    if (topText.classList.contains(`header2`)) {
+      topText.classList.remove(`header2`)
+      topText.classList.add('header')
     } else {
       return
     }
@@ -81,15 +113,15 @@ const CalculatorTwo = () => {
     <>
       <div className="wrapper" data-wrapper>
         <div className="container">
-          <div className="header">
+          <div className="header" data-top>
             <div>Calculator</div>
-            <div style={{ display: 'flex' }}>
+            <div style={{ display: 'flex', flexDirection: 'row-reverse' }}>
               <Toggler
                 addTheme={themeToggle}
                 lastTheme={lastTheme}
                 defaultTheme={defaultTheme}
               />
-              <div>Theme</div>
+              <div style={{ marginRight: '5px' }}>THEME</div>
             </div>
           </div>
           <div className="screen">
