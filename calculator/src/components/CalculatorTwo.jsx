@@ -35,15 +35,61 @@ const CalculatorTwo = () => {
     setDigit(Value)
   }
 
+  const themeToggle = () => {
+    const btn = document.querySelector('[data-wrapper]')
+    if (btn.classList.contains(`wrapper`)) {
+      btn.classList.remove(`wrapper`)
+      btn.classList.add('wrapper1')
+    }
+    if (btn.classList.contains(`wrapper2`)) {
+      btn.classList.remove(`wrapper2`)
+      btn.classList.add('wrapper1')
+    } else {
+      return
+    }
+  }
+
+  const lastTheme = () => {
+    const btn = document.querySelector('[data-wrapper]')
+    if (btn.classList.contains(`wrapper`)) {
+      btn.classList.remove(`wrapper`)
+      btn.classList.add('wrapper2')
+    }
+    if (btn.classList.contains(`wrapper1`)) {
+      btn.classList.remove(`wrapper1`)
+      btn.classList.add('wrapper2')
+    } else {
+      return
+    }
+  }
+
+  const defaultTheme = () => {
+    const btn = document.querySelector('[data-wrapper]')
+    if (btn.classList.contains(`wrapper1`)) {
+      btn.classList.remove(`wrapper1`)
+      btn.classList.add('wrapper')
+    }
+    if (btn.classList.contains(`wrapper2`)) {
+      btn.classList.remove(`wrapper2`)
+      btn.classList.add('wrapper')
+    } else {
+      return
+    }
+  }
+
   return (
     <>
       <div className="wrapper" data-wrapper>
         <div className="container">
           <div className="header">
             <div>Calculator</div>
-            <div>
-              <span>Theme</span>
-              <Toggler />
+            <div style={{ display: 'flex' }}>
+              <Toggler
+                addTheme={themeToggle}
+                lastTheme={lastTheme}
+                defaultTheme={defaultTheme}
+              />
+              <div>Theme</div>
             </div>
           </div>
           <div className="screen">

@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 *,
 *:before,
 *:after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .wrapper {
@@ -36,6 +38,8 @@
 .header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 12px;
+  color: rgb(248, 248, 248);
 }
 
 .screen {
@@ -47,6 +51,7 @@
   margin-bottom: 15px;
   border-radius: 12px;
   color: #fff;
+  font-size: 2.5em;
 }
 
 .buttons {
@@ -68,6 +73,7 @@
   text-decoration: none;
   border: none;
   box-shadow: 0 3px hsl(224, 28%, 35%);
+  padding: 2px;
 }
 
 button {
@@ -77,6 +83,7 @@ button {
   text-decoration: none;
   border: none;
   box-shadow: 0 3px hsl(28deg 16% 65%);
+  font-weight: bold;
 }
 
 .but {
@@ -92,6 +99,7 @@ button {
 .but-2 {
   grid-column-start: 3;
   grid-column-end: 5;
+  color: #fff;
   background-color: hsl(6, 63%, 50%);
   box-shadow: 0 3px hsl(6, 70%, 34%);
 }
